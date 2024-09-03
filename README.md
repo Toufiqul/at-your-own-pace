@@ -1,6 +1,7 @@
 # Turborepo starter
 
-![1project](https://github.com/user-attachments/assets/f370e561-5b09-4a21-8517-2ada5c8bbaea)
+![New Microsoft PowerPoint Presentation](https://github.com/user-attachments/assets/3b7f0144-b4f9-4592-a4ec-30a76fad5324)
+
 
 
 ## Using this example
@@ -14,6 +15,12 @@ npx create-turbo@latest
 ## What's inside?
 
 This Turborepo includes the following packages/apps:
+
+![Slide2](https://github.com/user-attachments/assets/53d31bb9-9ef2-44e9-807a-01bf968f93ae)
+
+![Slide3](https://github.com/user-attachments/assets/a4e0c6c6-21bc-4b1a-a8f0-ba70a51970ff)
+
+![Slide4](https://github.com/user-attachments/assets/70a1726c-f8fe-4266-8ec0-47f6a29a68eb)
 
 ### Apps and Packages
 
