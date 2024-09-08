@@ -91,6 +91,7 @@ The PACE Explorer portal uses open data from the PACE satellite, processed and v
 
 ## How to Run  
 To clone and run this project locally:
+# Make sure you have docker installed.
 
 1. Clone the repository:
    ```bash
@@ -102,8 +103,9 @@ To clone and run this project locally:
    cd pace-explorer
    ```
 
-3. Open `index.html` in your preferred web browser.
-
+3.  ```bash
+   docker compose up --build
+   ``` 
 ---
 
 ### Acknowledgments  
