@@ -69,7 +69,7 @@ The PACE Explorer portal uses open data from the PACE satellite, processed and v
 ---
 
 ### UI Screenshots  
-(Insert screenshots of key UI components here)
+
 
 - **Homepage**:  
   ![Homepage](#) (Placeholder for image)
