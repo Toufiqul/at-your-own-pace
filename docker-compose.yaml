@@ -9,8 +9,8 @@ services:
     working_dir: /app
     command: pnpm dev
     ports:
-      - target: 3001
-        published: 3001
+      - target: 3000
+        published: 3000
 
       - target: 5173
         published: 5173

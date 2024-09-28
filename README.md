@@ -91,11 +91,11 @@ The PACE Explorer portal uses open data from the PACE satellite, processed and v
 
 ## How to Run  
 To clone and run this project locally:
-# Make sure you have docker installed.
+### Make sure you have docker installed.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Team-ORCA/pace-explorer.git
+   git clone https://github.com/Toufiqul/at-your-own-pace.git
    ```
 
 2. Navigate to the project directory:
@@ -103,7 +103,7 @@ To clone and run this project locally:
    cd pace-explorer
    ```
 
-3.  ```bash
+3. ```bash
    docker compose up --build
    ``` 
 ---

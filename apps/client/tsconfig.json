@@ -1,9 +1,16 @@
 {
   "files": [],
   "compilerOptions": {
+    "jsx": "react-jsx", // Ensure JSX is properly configured
+    "module": "ESNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     // ...
     "strict": true
   },
+  "include": ["src"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
