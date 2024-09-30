@@ -8,6 +8,10 @@ import Satellite from "./Satellite";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Section1 from "./Section1";
+import Section2 from "./Section2";
+import Section3 from "./Section3";
+import Section4 from "./Section4";
+import Section5 from "./Section5";
 
 // const backgroundImageUrl = "./background.jpg";
 // const backgroundImageUrl = "./temp_background.jpg";
@@ -55,7 +59,11 @@ export function App() {
         <p>This is the second section of the landing page.</p>
       </Section1> */}
       <Section1 />
-      <Section backgroundImageUrl="./bg_2.gif">
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Section5 />
+      {/* <Section backgroundImageUrl="./bg_2.gif">
         <h2 className="text-4xl">Section 2</h2>
         <p>This is the second section of the landing page.</p>
       </Section>
@@ -70,7 +78,7 @@ export function App() {
       <Section backgroundImageUrl="./bg_5.gif">
         <h2 className="text-4xl">Section 5</h2>
         <p>This is the third section of the landing page.</p>
-      </Section>
+      </Section> */}
     </div>
   );
 
