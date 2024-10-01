@@ -8,6 +8,7 @@ const Section2 = () => {
     vertical: false,
     horizontal: false,
   });
+  const [showButtons, setShowButtons] = useState(false);
 
   const toggleLine = (line) => {
     setShowLines((prev) => ({
@@ -36,27 +37,18 @@ const Section2 = () => {
     hidden: { opacity: 0, y: -100 },
     visible: { opacity: 1, y: 0 },
   };
+  const toggleButtons = () => {
+    setShowButtons((prev) => !prev);
+  };
 
   return (
     <div
       className="relative h-screen w-screen flex items-center justify-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${backgroundImageUrl})`, marginTop: "-3px" }}
+      style={{
+        backgroundImage: `url(${backgroundImageUrl})`,
+        marginTop: "-3px",
+      }}
     >
-      <div className="absolute top-5 left-5 z-10 flex gap-4">
-        <button
-          onClick={() => toggleLine("vertical")}
-          className="px-4 py-2 bg-blue-500 text-white rounded"
-        >
-          Toggle Vertical Line
-        </button>
-        <button
-          onClick={() => toggleLine("horizontal")}
-          className="px-4 py-2 bg-blue-500 text-white rounded"
-        >
-          Toggle Horizontal Line
-        </button>
-      </div>
-
       <div className="relative w-full h-full">
         <motion.div
           ref={ref}
@@ -67,9 +59,6 @@ const Section2 = () => {
           className="absolute left-10 w-1/6"
           style={{ top: "20%" }}
         >
-          {showLines.horizontal && (
-            <div className="absolute top-2/3 transform -translate-y-1/2 w-full h-1 bg-red-500" />
-          )}
           {showLines.vertical && (
             <div className="absolute left-1/3 transform -translate-x-1/2 w-1 h-full bg-red-500" />
           )}
@@ -84,15 +73,54 @@ const Section2 = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="absolute left-1/2 transform -translate-x-1/2 w-1/6"
           style={{ top: "10%" }}
+          onClick={toggleButtons} // Toggle buttons on click
         >
-          {showLines.horizontal && (
-            <div className="absolute top-2/3 transform -translate-y-1/2 w-full h-1 bg-red-500" />
-          )}
           {showLines.vertical && (
             <div className="absolute left-1/3 transform -translate-x-1/2 w-1 h-full bg-red-500" />
           )}
           <img src="cloud_small.png" alt="Cloud 2" className="w-full h-auto" />
         </motion.div>
+
+        {/* Buttons on the left side */}
+        {showButtons && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="absolute left-[30%] top-[15%] flex flex-col space-y-4"
+            >
+              <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                Cloud Optical Depth
+              </button>
+              {/* TODO make motion.button  */}
+              <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                Cloud Height
+              </button>
+              <button
+                className="bg-blue-500 text-white px-4 py-2 rounded"
+                onClick={() => toggleLine("vertical")}
+              >
+                Cloud Thickness
+              </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="absolute left-[70%] top-[15%] flex flex-col space-y-4"
+            >
+              <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                Cloud Phases
+              </button>
+              <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                Droplet size distribution
+              </button>
+              <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                Ice crystal shapes
+              </button>
+            </motion.div>
+          </>
+        )}
 
         <motion.div
           ref={ref}
@@ -103,9 +131,6 @@ const Section2 = () => {
           className="absolute right-10 w-1/6"
           style={{ top: "60%" }}
         >
-          {showLines.horizontal && (
-            <div className="absolute top-2/3 transform -translate-y-1/2 w-full h-1 bg-red-500" />
-          )}
           {showLines.vertical && (
             <div className="absolute left-1/3 transform -translate-x-1/2 w-1 h-full bg-red-500" />
           )}
