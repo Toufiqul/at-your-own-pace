@@ -9,7 +9,7 @@ const Section4 = () => {
   const backgroundImageUrl = "./bg_4.gif";
 
   return (
-    <motion.div
+    <div
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -20,7 +20,7 @@ const Section4 = () => {
       <div className="relative text-center text-white bg-opacity-40 p-6 rounded-lg">
         <h1>Section4</h1>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

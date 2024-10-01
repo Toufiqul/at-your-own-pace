@@ -1,7 +1,20 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+
 import { useInView } from "react-intersection-observer";
 
 const Section2 = () => {
+  const [showLines, setShowLines] = useState({
+    vertical: false,
+    horizontal: false,
+  });
+
+  const toggleLine = (line) => {
+    setShowLines((prev) => ({
+      ...prev,
+      [line]: !prev[line],
+    }));
+  };
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -9,7 +22,6 @@ const Section2 = () => {
 
   const backgroundImageUrl = "./bg_2.gif";
 
-  // Animations for clouds
   const slideFromLeft = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
@@ -30,6 +42,21 @@ const Section2 = () => {
       className="relative h-screen w-screen flex items-center justify-center bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${backgroundImageUrl})` }}
     >
+      <div className="absolute top-5 left-5 z-10 flex gap-4">
+        <button
+          onClick={() => toggleLine("vertical")}
+          className="px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Toggle Vertical Line
+        </button>
+        <button
+          onClick={() => toggleLine("horizontal")}
+          className="px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Toggle Horizontal Line
+        </button>
+      </div>
+
       <div className="relative w-full h-full">
         <motion.div
           ref={ref}
@@ -37,9 +64,15 @@ const Section2 = () => {
           animate={inView ? "visible" : "hidden"}
           variants={slideFromLeft}
           transition={{ duration: 0.8 }}
-          className="absolute left-0 w-1/4"
+          className="absolute left-10 w-1/6"
           style={{ top: "20%" }}
         >
+          {showLines.horizontal && (
+            <div className="absolute top-2/3 transform -translate-y-1/2 w-full h-1 bg-red-500" />
+          )}
+          {showLines.vertical && (
+            <div className="absolute left-1/3 transform -translate-x-1/2 w-1 h-full bg-red-500" />
+          )}
           <img src="cloud_small.png" alt="Cloud 1" className="w-full h-auto" />
         </motion.div>
 
@@ -49,9 +82,15 @@ const Section2 = () => {
           animate={inView ? "visible" : "hidden"}
           variants={slideFromTop}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="absolute left-1/2 transform -translate-x-1/2 w-1/4"
+          className="absolute left-1/2 transform -translate-x-1/2 w-1/6"
           style={{ top: "10%" }}
         >
+          {showLines.horizontal && (
+            <div className="absolute top-2/3 transform -translate-y-1/2 w-full h-1 bg-red-500" />
+          )}
+          {showLines.vertical && (
+            <div className="absolute left-1/3 transform -translate-x-1/2 w-1 h-full bg-red-500" />
+          )}
           <img src="cloud_small.png" alt="Cloud 2" className="w-full h-auto" />
         </motion.div>
 
@@ -61,9 +100,15 @@ const Section2 = () => {
           animate={inView ? "visible" : "hidden"}
           variants={slideFromRight}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="absolute right-0 w-1/4"
+          className="absolute right-10 w-1/6"
           style={{ top: "60%" }}
         >
+          {showLines.horizontal && (
+            <div className="absolute top-2/3 transform -translate-y-1/2 w-full h-1 bg-red-500" />
+          )}
+          {showLines.vertical && (
+            <div className="absolute left-1/3 transform -translate-x-1/2 w-1 h-full bg-red-500" />
+          )}
           <img src="cloud_small.png" alt="Cloud 3" className="w-full h-auto" />
         </motion.div>
       </div>
