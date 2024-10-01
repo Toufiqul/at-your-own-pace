@@ -17,7 +17,7 @@ const Section2 = () => {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       //   transition={{ duration: 0.6 }}
       className="relative h-screen w-screen flex items-center justify-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+      style={{ backgroundImage: `url(${backgroundImageUrl})`, marginTop: "-3px" }}
     >
       <div className="relative text-center text-white bg-opacity-40 p-6 rounded-lg">
         <h1>section 2</h1>
