@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #f57f17;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.keypoints-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.keypoint {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.keypoint:hover {
+  background-color: #388e3c;
+}

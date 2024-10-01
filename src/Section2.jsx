@@ -40,7 +40,7 @@ const Section2 = () => {
   return (
     <div
       className="relative h-screen w-screen flex items-center justify-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+      style={{ backgroundImage: `url(${backgroundImageUrl})`, marginTop: "-3px" }}
     >
       <div className="absolute top-5 left-5 z-10 flex gap-4">
         <button

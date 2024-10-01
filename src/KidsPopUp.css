@@ -1,0 +1,53 @@
+/* Pop-up background overlay */
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Pop-up content */
+.popup-content {
+  background-color: #ffec99;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Pop-up header */
+.popup-header h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #ff6347;
+  margin: 0;
+}
+
+/* Pop-up body */
+.popup-body {
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Close button */
+.popup-close-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup-close-btn:hover {
+  background-color: #ff4500;
+}
