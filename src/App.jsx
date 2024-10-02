@@ -1,43 +1,52 @@
 import "./App.css";
-import Section1 from "./Section1";
-import Section2 from "./Section2";
-import Section3 from "./Section3";
-import Section4 from "./Section4";
-import Section5 from "./Section5";
+import Home from "./Home";
+import GetData from "./GetData";
+import LearningRes from "./LearningRes";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+function Navbar() {
+  return (
+    <nav className="bg-gray-800 text-white py-4 px-6 sticky top-0 z-50">
+      <div className="container mx-auto flex justify-between">
+        <Link to="/getData" className="text-lg hover:text-blue-300">
+          PACE Data
+        </Link>
+        <Link to="/learningResource" className="text-lg hover:text-blue-300">
+          Learning Resource
+        </Link>
+        <a
+          href="https://discord.gg/cTcxpBJGsU"
+          className="text-lg hover:text-blue-300"
+          target="_blank"
+        >
+          Community
+        </a>
+      </div>
+    </nav>
+  );
+}
 
 function App() {
   return (
-    <div className="overflow-x-hidden h-screen w-screen">
-      {/* <Section backgroundImageUrl="./bg_1.gif">
+    <Router>
+      <div className="overflow-x-hidden h-screen w-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/getData" element={<GetData />} />
+          <Route path="/learningResource" element={<LearningRes />} />
+        </Routes>
+
+        {/* <Section backgroundImageUrl="./bg_1.gif">
           <h2 className="text-4xl">Section 1</h2>
           <p>This is the first section of the landing page.</p>
         </Section> */}
-      {/* <Section1 backgroundImageUrl="./bg_1.gif">
+        {/* <Section1 backgroundImageUrl="./bg_1.gif">
           <h2 className="text-4xl">Section 2</h2>
           <p>This is the second section of the landing page.</p>
         </Section1> */}
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      {/* <Section backgroundImageUrl="./bg_2.gif">
-          <h2 className="text-4xl">Section 2</h2>
-          <p>This is the second section of the landing page.</p>
-        </Section>
-        <Section backgroundImageUrl="./bg_3.gif">
-          <h2 className="text-4xl">Section 3</h2>
-          <p>This is the third section of the landing page.</p>
-        </Section>
-        <Section backgroundImageUrl="./bg_4.gif">
-          <h2 className="text-4xl">Section 4</h2>
-          <p>This is the third section of the landing page.</p>
-        </Section>
-        <Section backgroundImageUrl="./bg_5.gif">
-          <h2 className="text-4xl">Section 5</h2>
-          <p>This is the third section of the landing page.</p>
-        </Section> */}
-    </div>
+      </div>
+    </Router>
   );
 
   //   const [queryClient] = useState(() => new QueryClient());

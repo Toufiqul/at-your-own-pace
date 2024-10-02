@@ -59,6 +59,7 @@ const Section2 = () => {
           className="absolute left-10 w-1/6"
           style={{ top: "20%" }}
         >
+          n
           {showLines.vertical && (
             <div className="absolute left-1/3 transform -translate-x-1/2 w-1 h-full bg-red-500" />
           )}
