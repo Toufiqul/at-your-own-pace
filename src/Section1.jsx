@@ -19,13 +19,19 @@ const Section1 = () => {
 
   return (
     <div className="p-0">
-      <motion.div
+      <div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.6 }}
-        className="relative h-screen w-screen flex items-center justify-center bg-cover bg-no-repeat px-0"
-        style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+        className="relative h-screen w-screen flex items-center justify-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundSize: "contain", // Change from cover to contain
+          backgroundPosition: "center", // Center the image
+          overflow: "hidden",
+          marginTop: "-2px",
+        }}
       >
         <div className="relative text-white bg-opacity-40 rounded-lg w-full max-w-screen-xl flex items-center justify-between px-0">
           {/* Left Column - Text sliding in from the left */}
@@ -69,7 +75,7 @@ const Section1 = () => {
             <p>It will capture images of Earth from orbit.</p>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

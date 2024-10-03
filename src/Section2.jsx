@@ -43,10 +43,13 @@ const Section2 = () => {
 
   return (
     <div
-      className="relative h-screen w-screen flex items-center justify-center bg-cover bg-no-repeat"
+      className="relative h-screen w-screen flex items-center justify-center bg-no-repeat"
       style={{
         backgroundImage: `url(${backgroundImageUrl})`,
-        marginTop: "-3px",
+        backgroundSize: "contain", // Change from cover to contain
+        backgroundPosition: "center", // Center the image
+        overflow: "hidden",
+        marginTop: "-2px",
       }}
     >
       <div className="relative w-full h-full">
@@ -59,7 +62,6 @@ const Section2 = () => {
           className="absolute left-10 w-1/6"
           style={{ top: "20%" }}
         >
-          n
           {showLines.vertical && (
             <div className="absolute left-1/3 transform -translate-x-1/2 w-1 h-full bg-red-500" />
           )}

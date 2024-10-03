@@ -29,7 +29,7 @@ function Navbar() {
 function App() {
   return (
     <Router>
-      <div className="overflow-x-hidden h-screen w-screen">
+      <div className="">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
