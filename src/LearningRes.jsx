@@ -32,6 +32,7 @@ const Modal = ({ isOpen, onClose, gifSrc }) => {
           alt="GIF"
           style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }}
         />
+        <p></p>
       </div>
     </div>
   );
@@ -39,9 +40,23 @@ const Modal = ({ isOpen, onClose, gifSrc }) => {
 const LearningRes = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [currentGif, setCurrentGif] = useState("");
+  const [showVideo, setShowVideo] = useState(false);
 
-  const gifs = ["cloud_mask_Gulf.gif", "Chloro_Gulf.gif", "PAR_Gulf.gif"];
+  const handleImageClick = () => {
+    setShowVideo(true);
+  };
 
+  const gifs = ["Chloro_Gulf.gif", "PAR_Gulf.gif", "cloud_mask_Gulf.gif"];
+  const title = [
+    "Chlorophyll-a Concentration: The Ocean’s Green Indicator \n ",
+    "Photosynthetically Active Radiation (PAR): Illuminating the Energy That Drives Life on Earth \n ",
+    "Cloud Mask: Tracking the Sky’s Influence on Data \n ",
+  ];
+  const description = [
+    "In this map, we see how chlorophyll-a levels fluctuate across the Gulf of Mexico and the western Atlantic Ocean. Chlorophyll-a, the pigment responsible for photosynthesis, present in phytoplanktons, gives the ocean its ‘color’. The ocean color reveals the levels of Chlorophyll-a present in the water which is detected by the PACE satellite. The bright red regions represent high concentrations of chlorophyll-a, while green and blue indicate subsequently lower levels of chlorophyll-a. By tracking these changes over time, we can understand the primary productivity by phytoplankton in the ocean’s food chain.",
+    "In this vibrant map, we see the distribution of Photosynthetically Active Radiation (PAR), which indicates how much sunlight energy is available at the ocean’s surface for fueling the growth of phytoplankton. Darker purples represent lower PAR values, while bright yellows show regions bathed in a lot of sunlight. PAR is critical for phytoplankton, the base of the marine food web, to produce energy through photosynthesis. ",
+    "Clouds, though vital for Earth’s weather, can obscure satellite data and obstruct sunlight reaching the Earth’s surface. This map highlights the changing density of clouds over the Gulf of Mexico. By analyzing cloud coverage over time, we can understand how satellite missions like PACE navigate and account for these obstacles, and ensure accurate observations of ocean color.",
+  ];
   const handleGifClick = (gifSrc) => {
     setCurrentGif(gifSrc);
     setModalOpen(true);
@@ -51,7 +66,10 @@ const LearningRes = () => {
     setModalOpen(false);
   };
   return (
-    <div className="p-5 space-y-5 bg-black">
+    <div
+      className="p-5 space-y-5 bg-cover bg-center min-h-screen"
+      style={{ backgroundImage: 'url("/bg_1.jpg")' }}
+    >
       <h2 className="text-center text-2xl font-bold mb-4 text-white">Videos</h2>
       {/* src="https://www.youtube.com/watch?v=ovHBWp1SzqU" */}
 
@@ -61,7 +79,8 @@ const LearningRes = () => {
           <img
             src="OC_Tells_a_Lot.png"
             alt="Placeholder Image 2"
-            className="w-full h-auto rounded"
+            className="w-full h-auto rounded cursor-pointer"
+            onClick={handleImageClick} // Add click handler
           />
           <p className="font-semi-bold text-white">
             The Ocean Color tells us a LOT!!!
@@ -88,6 +107,19 @@ const LearningRes = () => {
           </p>
         </div>
       </div>
+      {showVideo && (
+        <div className="aspect-video w-1/2 mx-auto mt-6">
+          <iframe
+            className="h-full w-full rounded-lg"
+            src="https://www.youtube.com/embed/qpxI32waa_w?si=2TzjHgKzRDOgi528"
+            width="100%"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      )}
 
       {/* Row 2 */}
       <h2 className="text-center text-2xl font-bold mb-4 text-white">Comics</h2>
@@ -132,31 +164,48 @@ const LearningRes = () => {
           <p className="font-semi-bold text-white">Captain Photon</p>
         </div>
       </div>
-      <h2 className="text-center text-2xl font-bold mb-4 text-white">
-        Story Maps
+      <h2 className="text-center text-2xl font-bold mb-4 text-white pt-4">
+        Story Map
       </h2>
-      {/* Row 3 */}
-      <div className="flex justify-center space-x-5">
-        {gifs.map((gif, index) => (
-          <div
-            key={index}
-            className="border border-gray-300 p-4 w-72 text-center"
-          >
-            <img
-              src={gif}
-              alt={`GIF ${index + 1}`}
-              className="w-full h-auto rounded cursor-pointer"
-              onClick={() => handleGifClick(gif)}
-            />
-          </div>
-        ))}
+      <div className="border border-gray-300">
+        {/* Row 3 */}
+        <div className="flex justify-center space-x-5">
+          {gifs.map((gif, index) => (
+            <div key={index} className=" p-4 w-1/3 text-center">
+              <img
+                src={gif}
+                alt={`GIF ${index + 1}`}
+                className="w-full h-auto rounded cursor-pointer"
+                onClick={() => handleGifClick(gif)}
+              />
+              <p className="font-bold text-white justify-center pt-1">
+                {title[index]}
+              </p>
+              <p className="font-semi-bold text-white justify-center pt-2">
+                {description[index]}
+              </p>
+            </div>
+          ))}
 
-        {/* Modal for displaying the GIF */}
-        <Modal
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-          gifSrc={currentGif}
-        />
+          {/* Modal for displaying the GIF */}
+          <Modal
+            isOpen={isModalOpen}
+            onClose={handleCloseModal}
+            gifSrc={currentGif}
+          />
+        </div>
+        <p className="text-white text-xl px-4 py-2">
+          By analyzing all the three maps, we can connect the dots between
+          sunlight, ocean productivity, and the impact of changing light
+          conditions due to seasons and cloud cover on marine life. <br />
+          More cloud coverage reduces the amount of Photosynthetically Active
+          Radiation (PAR) reaching the ocean’s surface, which in turn limits the
+          sunlight available for chlorophyll-a production. This means less light
+          for photosynthesis, leading to reduced phytoplankton growth, the base
+          component of marine food web. By studying these relationships, we can
+          see how atmospheric conditions directly influence ocean productivity
+          and the global carbon cycle.
+        </p>
       </div>
     </div>
   );

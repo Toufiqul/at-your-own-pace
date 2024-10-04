@@ -45,7 +45,7 @@ const Section2 = () => {
     <div
       className="relative h-screen w-screen flex items-center justify-center bg-no-repeat"
       style={{
-        backgroundImage: `url(${backgroundImageUrl})`,
+        // backgroundImage: `url(${backgroundImageUrl})`,
         backgroundSize: "contain", // Change from cover to contain
         backgroundPosition: "center", // Center the image
         overflow: "hidden",

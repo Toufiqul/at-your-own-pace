@@ -38,9 +38,17 @@ const GetData = () => {
             onChange={(e) => setParameter(e.target.value)}
           >
             <option value="">-- Select the parameter you want --</option>
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option 3">Option 3</option>
+            <option value="PAR">
+              Daily photosynthetically available radiation (PAR)
+            </option>
+            <option value="Chl-a">Concentration of chlorophyll-a</option>
+            <option value="phy-pig">
+              Phytoplankton pigment concentrations
+            </option>
+            <option value="spec-phy">
+              Spectral phytoplankton absorption coefficients
+            </option>
+            <option value="IOP">IOP</option>
           </select>
         </div>
         {/* Start Date */}

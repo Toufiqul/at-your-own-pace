@@ -64,7 +64,7 @@ const Section3 = () => {
       transition={{ duration: 0.6 }}
       className="relative h-screen w-screen flex items-center justify-center bg-no-repeat"
       style={{
-        backgroundImage: `url(${backgroundImageUrl})`,
+        // backgroundImage: `url(${backgroundImageUrl})`,
         backgroundSize: "contain", // Change from cover to contain
         backgroundPosition: "center", // Center the image
         marginTop: "-2px",
@@ -102,9 +102,6 @@ const Section3 = () => {
         onClose={togglePopup}
         content="Learning is fun! Keep exploring new things every day!"
       /> */}
-      </div>
-      <div className="fixed bottom-0 left-0 w-full text-center bg-opacity-50 p-4">
-        <p className="text-white">Hello</p>
       </div>
     </div>
   );

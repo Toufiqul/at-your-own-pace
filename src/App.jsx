@@ -8,6 +8,9 @@ function Navbar() {
   return (
     <nav className="bg-gray-800 text-white py-4 px-6 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between">
+        <Link to="/" className="text-lg hover:text-blue-300">
+          HOME
+        </Link>
         <Link to="/getData" className="text-lg hover:text-blue-300">
           PACE Data
         </Link>
@@ -29,7 +32,7 @@ function Navbar() {
 function App() {
   return (
     <Router>
-      <div className="">
+      <div>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

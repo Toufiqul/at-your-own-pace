@@ -16,7 +16,7 @@ const Section4 = () => {
       transition={{ duration: 0.6 }}
       className="relative h-screen w-screen flex items-center justify-center bg-no-repeat"
       style={{
-        backgroundImage: `url(${backgroundImageUrl})`,
+        // backgroundImage: `url(${backgroundImageUrl})`,
         backgroundSize: "contain", // Change from cover to contain
         backgroundPosition: "center", // Center the image
         marginTop: "-2px",
