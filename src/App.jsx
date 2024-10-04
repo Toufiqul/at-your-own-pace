@@ -11,11 +11,11 @@ function Navbar() {
         <Link to="/" className="text-lg hover:text-blue-300">
           HOME
         </Link>
-        <Link to="/getData" className="text-lg hover:text-blue-300">
-          PACE Data
-        </Link>
         <Link to="/learningResource" className="text-lg hover:text-blue-300">
           Learning Resource
+        </Link>
+        <Link to="/getData" className="text-lg hover:text-blue-300">
+          Access PACE Data
         </Link>
         <a
           href="https://discord.gg/cTcxpBJGsU"
