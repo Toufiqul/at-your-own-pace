@@ -8,12 +8,22 @@ const GetData = () => {
   const [endDate, setEndDate] = useState(null);
 
   const handleGetData = () => {
-    // Your logic to handle data retrieval
+    // Specify the file name you want to download
+    const fileName = "PACE_PAR.20240713T081853.L2.OC_BGC.V2_0.NRT.nc"; // Replace with your actual file name
+    const filePath = `${process.env.PUBLIC_URL}/${fileName}`; // Construct file path
+
+    // Create an anchor element and trigger a download
+    const link = document.createElement("a");
+    link.href = filePath;
+    link.download = fileName; // Set the filename for download
+    document.body.appendChild(link); // Append link to body
+    link.click(); // Trigger click event
+    document.body.removeChild(link); // Remove link after downloading
   };
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center relative "
+      className="min-h-screen bg-cover bg-center relative"
       style={{
         backgroundImage: "url(getData_bg.png)", // Add your space image path
         backgroundSize: "cover",
@@ -23,8 +33,6 @@ const GetData = () => {
       }}
     >
       <div className="bg-black bg-opacity-0 p-5 rounded w-1/2">
-        {" "}
-        {/* Background overlay for better text visibility */}
         <h2 className="text-2xl text-white mb-6">Access PACE Data</h2>
         {/* Dropdown */}
         <div className="mb-4">
