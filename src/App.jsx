@@ -7,19 +7,37 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="bg-black text-white py-4 px-6 sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between">
-        <Link to="/" className="text-lg hover:text-blue-300">
+      <div
+        className="container mx-auto flex justify-evenly items-center"
+        style={{ paddingLeft: "4%", paddingRight: "4%" }}
+      >
+        <Link
+          to="https://app.growtoinfinity.co/v2/preview/MsHMgOqhC9RsHAO3PgCO?notrack=true"
+          className="text-lg font-semi-bold hover:text-blue-300"
+        >
           HOME
         </Link>
-        <Link to="/learningResource" className="text-lg hover:text-blue-300">
-          Learning Resource
+
+        <Link
+          to="/learningResource"
+          className="text-lg font-semi-bold hover:text-blue-300"
+        >
+          Learning Resources
         </Link>
-        <Link to="/getData" className="text-lg hover:text-blue-300">
+        {/* Center Links: Access PACE Data */}
+        <Link
+          to="/getData"
+          className="text-lg font-semi-bold hover:text-blue-300"
+        >
           Access PACE Data
         </Link>
+
+        {/* Center Links: Learning Resource */}
+
+        {/* Right: Community */}
         <a
           href="https://discord.gg/cTcxpBJGsU"
-          className="text-lg hover:text-blue-300"
+          className="text-lg font-semi-bold hover:text-blue-300"
           target="_blank"
         >
           Community
