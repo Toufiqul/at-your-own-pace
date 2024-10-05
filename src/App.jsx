@@ -12,7 +12,7 @@ function Navbar() {
         style={{ paddingLeft: "4%", paddingRight: "4%" }}
       >
         <Link
-          to="https://app.growtoinfinity.co/v2/preview/MsHMgOqhC9RsHAO3PgCO?notrack=true"
+          to="https://at-your-own-pace.earth/"
           className="text-lg font-semi-bold hover:text-blue-300"
         >
           HOME
