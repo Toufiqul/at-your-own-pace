@@ -33,171 +33,174 @@ const Section1 = () => {
       className="p-0 w-full min-h-screen flex flex-col justify-center items-center"
     >
       <div className="relative text-white bg-opacity-40 rounded-lg w-full max-w-screen-xl mx-auto">
-        {/* Top Row - Left Column and Satellite Image */}
-        <div className="flex items-start justify-start w-full">
-          {/* Left Column - First h2 */}
+        <div>
+          {" "}
+          <h1 className="text-4xl">header</h1>
+        </div>
+        {/* Top Row - Text on the Left and Satellite Image on the Right */}
+        <div className="flex items-start justify-between w-full">
+          {/* Left Column - First h2 and paragraph */}
           <motion.div
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={slideFromLeft}
             transition={{ duration: 0.8 }}
-            className="w-1/4 text-left px-4"
+            className="w-1/3 max-w-lg text-left px-4"
           >
-            <h2 className="text-xl mb-4">
+            <h2 className="text-xl md:text-lg lg:text-2xl py-10 px-2 mt-40">
+              {" "}
               PACE satellite launched on a SpaceX Falcon 9 rocket at 1:33 A.M.,
               Feb 8th, 2024.
             </h2>
           </motion.div>
 
           {/* Satellite Image */}
-          <div className="w-1/2 flex justify-center items-center">
+          <div className="flex-grow flex justify-center items-center max-w-full min-w-0 w-full">
+            {" "}
+            {/* Increased max-width */}
             <img
               src="PACE_satellite.png" // Replace with your image path or URL
               alt="PACE Satellite"
-              className="w-full h-auto max-w-lg"
+              className="w-full h-auto max-w-4lg"
             />
           </div>
         </div>
 
-        {/* Second Row - First <p> aligned to the right */}
-        <div className="flex justify-end w-full mt-4">
+        {/* Second Row - Text taking up left and right sides */}
+        <div className="flex justify-between w-full mt-4">
+          <motion.div
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={slideFromLeft}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="w-1/2 text-left px-4"
+          >
+            <p className="text-2xl">
+              PACE has three sensors: OCI, SPEXone, and HARP2.
+            </p>
+          </motion.div>
+
           <motion.div
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={slideFromRight}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-1/4 text-right px-4"
+            className="w-1/2 text-right px-4"
           >
-            <p>
+            <p className="text-2xl">
               Hyperspectral vision with the ability to view broad spectrum from
               350 to 885 nanometer wavelengths.
             </p>
           </motion.div>
         </div>
 
-        {/* Third Row - Centered second <h2> */}
-        <div className="flex justify-center w-full mt-6">
+        {/* Third Row - Buttons for different sections */}
+        <div>
+          <div className="flex justify-center w-full mt-6">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              className="text-center px-4"
+            >
+              <p className="text-2xl p-5 pt-7">
+                Scroll Down And Get Introduced To PACE!!
+              </p>
+              <h2 className="text-xl mb-4 pt-10">
+                The main body of PACE has three sections-
+              </h2>
+
+              {/* Buttons Row */}
+              <div className="flex justify-center space-x-4 mt-4">
+                <button
+                  className={`py-2 px-6  rounded transition duration-300 ${
+                    selectedSection === "RADIATOR"
+                      ? "bg-blue-700 text-white"
+                      : "bg-blue-500 text-white hover:bg-blue-700"
+                  }`}
+                  onClick={() => handleButtonClick("RADIATOR")}
+                >
+                  Radiator Shield
+                </button>
+                <button
+                  className={`py-2 px-6  rounded transition duration-300 ${
+                    selectedSection === "BUS"
+                      ? "bg-blue-700 text-white"
+                      : "bg-blue-500 text-white hover:bg-blue-700"
+                  }`}
+                  onClick={() => handleButtonClick("BUS")}
+                >
+                  BUS
+                </button>
+                <button
+                  className={`py-2 px-6  rounded transition duration-300 ${
+                    selectedSection === "SOLAR"
+                      ? "bg-blue-700 text-white"
+                      : "bg-blue-500 text-white hover:bg-blue-700"
+                  }`}
+                  onClick={() => handleButtonClick("SOLAR")}
+                >
+                  SOLAR array
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Conditionally Render Images and Descriptions */}
+      <div className="mt-8 flex justify-center items-start">
+        {" "}
+        {/* Use justify-center to center children */}
+        {selectedSection === "RADIATOR" && (
           <motion.div
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={slideFromRight}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-center px-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-right w-1/3 flex flex-col items-end"
           >
-            <h2 className="text-xl mb-4">
-              PACE has three sensors: OCI, SPEXone, and HARP2
-            </h2>
+            <img
+              src="radiator_block.png"
+              alt="Radiator Shield"
+              className="w-full h-1/3 mb-4"
+            />
+            <p className="text-white">
+              The Radiator Shield protects the satellite from extreme heat.
+            </p>
           </motion.div>
-        </div>
-        <div className="flex justify-center w-full mt-6">
+        )}
+        {selectedSection === "BUS" && (
           <motion.div
-            initial="hidden"
-            animate="visible"
-            className="text-center px-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-left w-1/3 flex flex-col"
           >
-            <h2 className="text-xl mb-4">
-              The main body of PACE has three sections-
-            </h2>
-
-            {/* Buttons Row */}
-            <div className="flex justify-center space-x-4 mt-4">
-              <button
-                className={`py-2 px-6 rounded transition duration-300 ${
-                  selectedSection === "BUS"
-                    ? "bg-blue-700 text-white"
-                    : "bg-blue-500 text-white hover:bg-blue-700"
-                }`}
-                onClick={() => handleButtonClick("BUS")}
-              >
-                BUS
-              </button>
-
-              <button
-                className={`py-2 px-6 rounded transition duration-300 ${
-                  selectedSection === "SOLAR"
-                    ? "bg-blue-700 text-white"
-                    : "bg-blue-500 text-white hover:bg-blue-700"
-                }`}
-                onClick={() => handleButtonClick("SOLAR")}
-              >
-                SOLAR array
-              </button>
-
-              <button
-                className={`py-2 px-6 rounded transition duration-300 ${
-                  selectedSection === "RADIATOR"
-                    ? "bg-blue-700 text-white"
-                    : "bg-blue-500 text-white hover:bg-blue-700"
-                }`}
-                onClick={() => handleButtonClick("RADIATOR")}
-              >
-                Radiator Shield
-              </button>
-            </div>
+            <img src="pace_bus.png" alt="BUS" className="w-full h-1/3 mb-4" />
+            <p className="text-white">
+              The BUS provides the core structural body for the PACE satellite.
+            </p>
           </motion.div>
-        </div>
-
-        {/* Conditionally Render Images and Descriptions */}
-        <div className="mt-8 flex justify-between items-start">
-          {/* BUS Section */}
-          {selectedSection === "BUS" && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="text-left w-1/3 flex flex-col items-start"
-            >
-              <img
-                src="pace_bus.png"
-                alt="BUS"
-                className="w-full h-auto mb-4"
-              />
-              <p>
-                The BUS provides the core structural body for the PACE
-                satellite.
-              </p>
-            </motion.div>
-          )}
-
-          {/* SOLAR Array Section */}
-          {selectedSection === "SOLAR" && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="text-center w-1/3 flex flex-col items-center"
-            >
-              <img
-                src="pace_solar.png"
-                alt="SOLAR array"
-                className="w-full h-auto mb-4"
-              />
-              <p>
-                The SOLAR array provides energy for the satellite through solar
-                power.
-              </p>
-            </motion.div>
-          )}
-
-          {/* Radiator Shield Section */}
-          {selectedSection === "RADIATOR" && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="text-right w-1/3 flex flex-col items-end"
-            >
-              <img
-                src="radiator_block.png"
-                alt="Radiator Shield"
-                className="w-full h-auto mb-4"
-              />
-              <p>
-                The Radiator Shield protects the satellite from extreme heat.
-              </p>
-            </motion.div>
-          )}
-        </div>
+        )}
+        {/* SOLAR Array Section */}
+        {selectedSection === "SOLAR" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-center w-1/3 flex flex-col items-center"
+          >
+            <img
+              src="pace_solar.png"
+              alt="SOLAR array"
+              className="w-full h-1/3 mb-4"
+            />
+            <p className="text-white">
+              The SOLAR array provides energy for the satellite through solar
+              power.
+            </p>
+          </motion.div>
+        )}
+        {/* Radiator Shield Section */}
       </div>
     </div>
   );
