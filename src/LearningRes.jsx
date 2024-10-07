@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import slidesData from "./comic1.json";
+import { Carousel } from "./Carousel.jsx";
 
 const Modal = ({ isOpen, onClose, gifSrc }) => {
   if (!isOpen) return null;
@@ -38,9 +40,11 @@ const Modal = ({ isOpen, onClose, gifSrc }) => {
   );
 };
 const LearningRes = () => {
+  const { slides } = slidesData;
   const [isModalOpen, setModalOpen] = useState(false);
   const [currentGif, setCurrentGif] = useState("");
   const [showVideo, setShowVideo] = useState(false);
+  const [showComic1, setShowComic1] = useState(false);
 
   const handleImageClick = () => {
     setShowVideo(true);
@@ -61,7 +65,9 @@ const LearningRes = () => {
     setCurrentGif(gifSrc);
     setModalOpen(true);
   };
-
+  const handleComicClick = () => {
+    setShowComic1(!showComic1);
+  };
   const handleCloseModal = () => {
     setModalOpen(false);
   };
@@ -130,6 +136,7 @@ const LearningRes = () => {
             src="Jamie1.png"
             alt="Placeholder Image 3"
             className="w-full h-auto rounded"
+            onClick={handleComicClick}
           />
           <p className="font-semi-bold text-white">
             Jamie and the Secret of the Polluted Skies - Volume 1
@@ -164,6 +171,11 @@ const LearningRes = () => {
           <p className="font-semi-bold text-white">Captain Photon</p>
         </div>
       </div>
+      {showComic1 && (
+        <div className="flex item-center justify-center mt-6 mb-6">
+          <Carousel data={slides} />
+        </div>
+      )}
       <h2 className="text-center text-2xl font-bold mb-4 text-white pt-4">
         Story Map
       </h2>
@@ -213,3 +225,4 @@ const LearningRes = () => {
 export default LearningRes;
 
 // src="cloud_mask_Gulf.gif"
+// 1R6licKi_4aBEp1Xqxgdhcm5n5FhSvEBI
