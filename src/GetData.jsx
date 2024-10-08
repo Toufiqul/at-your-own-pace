@@ -42,7 +42,7 @@ const GetData = () => {
     // link.click(); // Trigger click event
     // document.body.removeChild(link); // Remove link after downloading
     // const ENDPOINT = `http://13.250.21.112:8000/?short_name=PACE_OCI_L2_BGC_NRT&start_date=2024-05-01&end_date=2024-05-16`
-    const ENDPOINT2 = `http://13.250.21.112:8000/?short_name=${shortName}&start_date=${formatDate(startDate)}&end_date=${formatDate(endDate)}`
+    const ENDPOINT2 = `https://13.250.21.112:8000/?short_name=${shortName}&start_date=${formatDate(startDate)}&end_date=${formatDate(endDate)}`
     // console.log("end", ENDPOINT2)
     try {
       const response = await axios.get(ENDPOINT2);
