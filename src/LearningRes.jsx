@@ -139,7 +139,7 @@ const LearningRes = () => {
             onClick={handleComicClick}
           />
           <p className="font-semi-bold text-white">
-            Jamie and the Secret of the Polluted Skies - Volume 1
+            Jamie and the Mystery of the Blooming Sea
           </p>
         </div>
         <div className="border border-gray-300 p-4 w-72 text-center">
@@ -149,7 +149,7 @@ const LearningRes = () => {
             className="w-full h-auto rounded opacity-50"
           />
           <p className="font-semi-bold text-white">
-            Jamie and the Secret of the Polluted Skies - Volume 2
+            Jamie and the Secret of the Polluted Skies
           </p>
         </div>
         <div className="border border-gray-300 p-4 w-72 text-center">
