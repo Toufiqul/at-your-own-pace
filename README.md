@@ -50,10 +50,10 @@ We are actively collaborating with institutions like **Noazesh Knowledge Center*
 
 
 ## Contributors
-- **Md Shahadat Hossain:**  Team Lead, Project architecture, AI Chatbot development, Project Video Making, Comics creation, UI Concept, Artworks.
-- **Md Rashed Ul Alam:** Coordinator, Project architecture, Community development, Landing Page Development, Tutorials, UI concept, Artworks.
-- **Eurida Liyana:** Background research, Voiceover, Story maps, Documentation.
-- **Md Toufiqul Islam:** Frontend development, UI/UX design.
+- **[Md Shahadat Hossain](https://www.linkedin.com/in/muhammad-sd/):**  Team Lead, Project architecture, AI Chatbot development, Project Video Making, Comics creation, UI Concept, Artworks.
+- **[Md Rashed Ul Alam](https://www.linkedin.com/in/rashed30/):** Coordinator, Project architecture, Community development, Landing Page Development, Tutorials, UI concept, Artworks.
+- **[Eurida Liyana](https://www.linkedin.com/in/eurida-liyana-1b15881b5/):** Background research, Voiceover, Story maps, Documentation.
+- **[Md Toufiqul Islam](https://www.linkedin.com/in/toufiqul/):** Frontend development, UI/UX design.
 - **Alif Hossain Sourov:** Backend development, Data Access Portal, UI/UX design.
 
 
