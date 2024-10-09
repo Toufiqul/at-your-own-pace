@@ -158,7 +158,7 @@ const GetData = () => {
 
         {
           error && 
-          <span>An Error Occurred. Try With Different Parameters</span>
+          <span style={{color: "white", display: "block", marginTop: "12px"}}>An Error Occurred. Try With Different Parameters</span>
         }
 
       </div>
