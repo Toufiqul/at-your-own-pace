@@ -17,7 +17,7 @@
 [Visit our platform](https://at-your-own-pace.earth/)
 
 ## Project Description
-[Full description of the project](
+[Full description of the project](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/team-orca/?tab=project)
 
 ## Mission and Objectives
 Our mission is to make NASA’s PACE data accessible to all, starting from zero knowledge, and transform users into PACE champions. We provide tailored educational resources and foster a community that promotes global ocean literacy.
