@@ -13,7 +13,7 @@
 [Watch the project demo](https://youtu.be/44X2NT9j9GE?feature=shared)
 
 ## Project Link
-[Visit the platform](https://at-your-own-pace.earth/)
+[Visit our platform](https://at-your-own-pace.earth/)
 
 ## Tools and Technologies Used
 - **Frontend:** React.JS, TailwindCSS, HTML.
