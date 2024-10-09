@@ -43,10 +43,10 @@ We are actively collaborating with institutions like **Noazesh Knowledge Center*
 - **Data Processing and Visualisation:** ArcGIS Pro, SNAP Toolbox.
   
 ## Use of Artificial Intelligence
-**ChatGPT ( version 4o)** - for comic story writing, language enhancement.
-**Chatling** – for creating customized AI chatbot Dashtoon Studio
-**Microsoft designer** – for creating educational comics
-**audioenhancer.ai** - for audio background noise removal.
+ - **ChatGPT ( version 4o)** - for comic story writing, language enhancement.
+ - **Chatling** – for creating customized AI chatbot Dashtoon Studio
+ - **Microsoft designer** – for creating educational comics
+ - **audioenhancer.ai** - for audio background noise removal.
 
 
 ## Contributors
