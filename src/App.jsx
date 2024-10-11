@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./Home";
 import GetData from "./GetData";
 import LearningRes from "./LearningRes";
+import VitrualTour from "./VitrualTour";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Navbar() {
@@ -31,6 +32,12 @@ function Navbar() {
         >
           Access PACE Data
         </Link>
+        <Link
+          to="/vitrualTour"
+          className="text-lg font-semi-bold hover:text-blue-300"
+        >
+          Virtual Tour
+        </Link>
 
         {/* Center Links: Learning Resource */}
 
@@ -56,6 +63,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/getData" element={<GetData />} />
           <Route path="/learningResource" element={<LearningRes />} />
+          <Route path="/vitrualTour" element={<VitrualTour />} />
         </Routes>
 
         {/* <Section backgroundImageUrl="./bg_1.gif">

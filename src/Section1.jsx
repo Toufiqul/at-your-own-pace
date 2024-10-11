@@ -26,11 +26,19 @@ const Section1 = () => {
     hidden: { opacity: 0, x: 100 },
     visible: { opacity: 1, x: 0 },
   };
+  const backgroundImageUrl = "./bg_1.gif";
 
   return (
     <div
       ref={ref}
       className="p-0 w-full min-h-screen flex flex-col justify-center items-center"
+      style={{
+        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundSize: "contain", // Change from cover to contain
+        backgroundPosition: "center", // Center the image
+        overflow: "hidden",
+        marginTop: "-2px",
+      }}
     >
       <div className="relative text-white bg-opacity-40 rounded-lg w-full max-w-screen-xl mx-auto">
         <div>

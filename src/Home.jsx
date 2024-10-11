@@ -12,7 +12,7 @@ function Home() {
     <div
       className="w-screen min-h-screen bg-cover bg-center bg-no-repeat mx-0 px-0"
       style={{
-        backgroundImage: `url(${backgroundImageUrl})`,
+        // backgroundImage: `url(${backgroundImageUrl})`,
         width: "1920px",
         height: "12500px",
       }}
