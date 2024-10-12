@@ -46,7 +46,7 @@ const Section4 = () => {
       className="p-0 w-full min-h-screen flex flex-col justify-center items-center relative"
       style={{
         backgroundImage: `url(${backgroundImageUrl})`,
-        backgroundSize: "contain", // Change from cover to contain
+        backgroundSize: "100% 100%", // Change from cover to contain
         backgroundPosition: "center", // Center the image
         overflow: "hidden",
         marginTop: "-2px",
