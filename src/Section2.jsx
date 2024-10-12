@@ -129,7 +129,7 @@ const Section2 = () => {
             className="absolute left-[30%] top-[15%] flex flex-col space-y-4"
           >
             <button
-              className="bg-blue-500 text-white px-4 py-2 rounded"
+              className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
               onClick={() => {
                 handleButtonClick(clouds.cod);
               }}
@@ -138,7 +138,7 @@ const Section2 = () => {
             </button>
             {/* TODO make motion.button  */}
             <button
-              className="bg-blue-500 text-white px-4 py-2 rounded"
+              className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
               onClick={() => {
                 handleButtonClick(clouds.cloudHeight);
               }}
@@ -146,7 +146,7 @@ const Section2 = () => {
               Cloud Height
             </button>
             <button
-              className="bg-blue-500 text-white px-4 py-2 rounded"
+              className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
               // onClick={() => toggleLine("vertical")}
               onClick={() => {
                 handleButtonClick(clouds.cloudThickness);
@@ -162,7 +162,7 @@ const Section2 = () => {
             className="absolute left-[70%] top-[15%] flex flex-col space-y-4"
           >
             <button
-              className="bg-blue-500 text-white px-4 py-2 rounded"
+              className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
               onClick={() => {
                 handleButtonClick(clouds.dropletSize);
               }}
@@ -170,7 +170,7 @@ const Section2 = () => {
               Droplet size distribution
             </button>
             <button
-              className="bg-blue-500 text-white px-4 py-2 rounded"
+              className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
               onClick={() => {
                 handleButtonClick(clouds.iceCrystal);
               }}

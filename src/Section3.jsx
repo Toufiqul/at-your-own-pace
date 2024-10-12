@@ -21,90 +21,134 @@ const Section3 = () => {
       title: "Aerosol Absorption",
       content:
         "Aerosol absorption refers to the process where aerosols (tiny particles in the atmosphere) absorb sunlight, converting it into heat. This affects Earth's radiation balance and can influence climate and weather patterns.",
+      content2:
+        "The process where aerosols absorb and convert sunlight into heat",
     },
     {
       id: 2,
       title: "Aerosol Optical Depth",
       content:
         "Aerosol Optical Depth (AOD) measures the extent to which aerosols in the atmosphere prevent sunlight from reaching the Earth's surface by scattering and absorbing it. Higher AOD values indicate more aerosols and greater light reduction.",
+      content2:
+        "Aerosols ability to prevent sunlight from reaching the Earth's surface",
     },
     {
       id: 3,
       title: "Aerosol Size Distributions",
       content:
         "Aerosol size distribution describes the range and proportion of aerosol particles of different sizes in the atmosphere, impacting their behavior, lifetime, and effects on air quality and climate",
+      content2:
+        "Describes the range and proportion of aerosol particles of different sizes in the atmosphere",
     },
     {
       id: 4,
-      title: "Aerosol Heights and Layer",
+      title: "Aerosol Heights",
       content:
         "Aerosol height refers to the altitude at which aerosol particles are concentrated in the atmosphere, while aerosol layers describe distinct vertical regions where these particles are found. Aerosol height and layers affect how aerosols interact with sunlight, clouds, and weather patterns, influencing climate and air quality.",
+      content2:
+        "The altitude at which aerosol particles are concentrated in the atmosphere",
     },
-    {
-      id: 5,
-      title: "Concentration of Brown/Black Carbon",
-      content:
-        "The concentration of brown or black carbon refers to the density of these carbonaceous aerosols in the atmosphere, typically measured in micrograms per cubic meter (µg/m³). These particles absorb sunlight and contribute to atmospheric warming and climate change.",
-    },
+    // {
+    //   id: 5,
+    //   title: "Concentration of Brown/Black Carbon",
+    //   content:
+    //     "The concentration of brown or black carbon refers to the density of these carbonaceous aerosols in the atmosphere, typically measured in micrograms per cubic meter (µg/m³). These particles absorb sunlight and contribute to atmospheric warming and climate change.",
+    // },
   ];
+  const imgLeft =
+    "https://drive.google.com/thumbnail?id=1oMJUAT6zvmqCxzwiBzTOMCO28ZIqYQNW&sz=w1000";
+  const imgMiddle =
+    "https://drive.google.com/thumbnail?id=1kvDjAiYOjyeI5_MtgQ9M9Y76IhtebcPV&sz=w1000";
+  const imgRight =
+    "https://drive.google.com/thumbnail?id=1EcLFSkemzKzi45J83o5q3QXH-uJEQSDN&sz=w1000";
 
-  const handleClick = (keyPoint) => {
-    setSelectedKeyPoint(keyPoint);
-  };
-
-  // Handler to close the pop-up
-  const handleClose = () => {
-    setSelectedKeyPoint(null);
-  };
   return (
     <div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.6 }}
-      className="relative h-screen w-screen flex items-center justify-center bg-no-repeat"
+      className="p-0 w-full min-h-screen flex flex-col justify-center items-center relative"
       style={{
-        // backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundImage: `url(${backgroundImageUrl})`,
         backgroundSize: "contain", // Change from cover to contain
         backgroundPosition: "center", // Center the image
-        marginTop: "-2px",
         overflow: "hidden",
+        marginTop: "-2px",
       }}
     >
-      <div className="relative text-center text-white bg-opacity-40 p-6 rounded-lg">
-        <h1>Section3</h1>
-        {/* <button
-          onClick={togglePopup}
-        >show popup</button> */}
-        <div className="keypoints-container">
-          {keyPoints.map((keyPoint) => (
-            <motion.div
-              key={keyPoint.id}
-              className="keypoint"
-              onClick={() => handleClick(keyPoint)}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              {keyPoint.title}
-            </motion.div>
-          ))}
-          {selectedKeyPoint && (
-            <KidsPopUp
-              show={true}
-              onClose={handleClose}
-              content={selectedKeyPoint.content}
-              keyPointTitle={selectedKeyPoint.title}
-            />
-          )}
+      <div className="flex justify-between space-x-4 p-4">
+        {/* Left Column - One Row */}
+        <div className="w-1/3 p-4">
+          <img
+            src={imgLeft}
+            alt="slkj"
+            className=" flex justify-center items-center"
+            style={{ width: "350px", height: "350px" }}
+          />
+          <p>Middle Column - Second Row</p>
         </div>
-        {/* <KidsPopUp
-        show={showPopup}
-        onClose={togglePopup}
-        content="Learning is fun! Keep exploring new things every day!"
-      /> */}
+
+        {/* Middle Column - Two Rows */}
+        <div className="w-1/3 flex flex-col space-y-4 p-4">
+          <div className="p-4">
+            <p>Middle Column - First Row</p>
+          </div>
+          <div className="p-4">
+            <img
+              src={imgMiddle}
+              alt="slkj"
+              className=" flex justify-center items-center"
+              style={{ width: "350px", height: "350px" }}
+            />
+            <p>Middle Column - Second Row</p>
+          </div>
+        </div>
+
+        {/* Right Column - One Row */}
+        <div className="w-1/3 p-4">
+          <img
+            src={imgRight}
+            alt="slkj"
+            className=" flex justify-center items-center"
+            style={{ width: "350px", height: "350px" }}
+          />
+          <p>Right Column - One Row</p>
+        </div>
+      </div>
+      <div className="flex justify-between p-2">
+        <div className="flex flex-col p-2">
+          <div>
+            <p className="mx-auto text-center bg-[#545DB9]">
+              {keyPoints[0].title}
+            </p>
+            <p>{keyPoints[0].content2}</p>
+          </div>
+          <div>
+            <p className="mx-auto text-center bg-[#545DB9]">
+              {keyPoints[1].title}
+            </p>
+            <p>{keyPoints[1].content2}</p>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <div>
+            <p className="mx-auto text-center bg-[#545DB9]">
+              {keyPoints[3].title}
+            </p>
+            <p>{keyPoints[3].content2}</p>
+          </div>
+          <div>
+            <p className="mx-auto text-center bg-[#545DB9]">
+              {keyPoints[2].title}
+            </p>
+            <p>{keyPoints[2].content2}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Section3;
+
+// 1oMJUAT6zvmqCxzwiBzTOMCO28ZIqYQNW
+
+// https://drive.google.com/file/d/1oMJUAT6zvmqCxzwiBzTOMCO28ZIqYQNW/view?usp=sharing

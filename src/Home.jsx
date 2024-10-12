@@ -14,7 +14,7 @@ function Home() {
       style={{
         // backgroundImage: `url(${backgroundImageUrl})`,
         width: "1920px",
-        height: "12500px",
+        // height: "12500px",
       }}
     >
       <Section1 />
