@@ -52,38 +52,44 @@ const Section4 = () => {
         marginTop: "-2px",
       }}
     >
-      <div>
-        <p className="mx-auto text-center text-white text-4xl mt-40">
-          Surface Ocean Data by PACE
-        </p>
-        <div className="flex justify-between p-2">
-          <div className="flex flex-col p-2">
-            <div>
-              <p className="mx-auto text-center bg-[#545DB9]">
-                {keyPoints[0].title}
-              </p>
-              <p>{keyPoints[0].content}</p>
-            </div>
-            <div>
-              <p className="mx-auto text-center bg-[#545DB9]">
-                {keyPoints[1].title}
-              </p>
-              <p>{keyPoints[1].content}</p>
-            </div>
+      <p className="mx-auto text-center text-white text-4xl mt-40">
+        Surface Ocean Data by PACE
+      </p>
+      <div className="flex justify-between p-2">
+        <div className="flex flex-col p-2">
+          <div>
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 text-xl">
+              {keyPoints[0].title}
+            </p>
+            <p className="text-xl px-2 w-3/4 mx-auto text-center">
+              {keyPoints[0].content}
+            </p>
           </div>
-          <div className="flex flex-col">
-            <div>
-              <p className="mx-auto text-center bg-[#545DB9]">
-                {keyPoints[3].title}
-              </p>
-              <p>{keyPoints[3].content}</p>
-            </div>
-            <div>
-              <p className="mx-auto text-center bg-[#545DB9]">
-                {keyPoints[2].title}
-              </p>
-              <p>{keyPoints[2].content}</p>
-            </div>
+          <div>
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 text-xl">
+              {keyPoints[1].title}
+            </p>
+            <p className="text-xl px-2 w-3/4 mx-auto text-center">
+              {keyPoints[1].content}
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <div>
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 text-xl">
+              {keyPoints[3].title}
+            </p>
+            <p className="text-xl px-2 w-3/4 mx-auto text-center">
+              {keyPoints[3].content}
+            </p>
+          </div>
+          <div>
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 text-xl">
+              {keyPoints[2].title}
+            </p>
+            <p className="text-xl px-2 w-3/4 mx-auto text-center">
+              {keyPoints[2].content}
+            </p>
           </div>
         </div>
       </div>

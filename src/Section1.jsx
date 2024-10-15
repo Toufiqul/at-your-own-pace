@@ -31,7 +31,7 @@ const Section1 = () => {
   return (
     <div
       ref={ref}
-      className="p-0 w-full min-h-screen flex flex-col justify-center items-center"
+      className="p-0 w-full min-h-screen flex flex-col items-center"
       style={{
         backgroundImage: `url(${backgroundImageUrl})`,
         backgroundSize: "100% 100%", // Change from cover to contain
@@ -41,9 +41,12 @@ const Section1 = () => {
       }}
     >
       <div className="relative text-white bg-opacity-40 rounded-lg w-full max-w-screen-xl mx-auto">
-        <div>
+        <div className="flex flex-col items-center">
           {" "}
-          <h1 className="text-4xl">header</h1>
+          <p className="text-l pt-2">Team ORCA presents</p>
+          <p className="text-4xl underline underline-offset-8">
+            At Your Own PACE!!
+          </p>
         </div>
         {/* Top Row - Text on the Left and Satellite Image on the Right */}
         <div className="flex items-start justify-between w-full">
@@ -55,7 +58,7 @@ const Section1 = () => {
             transition={{ duration: 0.8 }}
             className="w-1/3 max-w-lg text-left px-4"
           >
-            <h2 className="text-xl md:text-lg lg:text-2xl py-10 px-2 mt-40">
+            <h2 className="text-xl md:text-lg lg:text-2xl py-10 px-2 align-middle">
               {" "}
               PACE satellite launched on a SpaceX Falcon 9 rocket at 1:33 A.M.,
               Feb 8th, 2024.
@@ -70,6 +73,7 @@ const Section1 = () => {
               src="PACE_satellite.png" // Replace with your image path or URL
               alt="PACE Satellite"
               className="w-full h-auto max-w-4lg"
+              //   style={{ width: "650px", height: "400px" }}
             />
           </div>
         </div>
@@ -156,7 +160,7 @@ const Section1 = () => {
       </div>
 
       {/* Conditionally Render Images and Descriptions */}
-      <div className="mt-8 flex justify-center items-start">
+      <div className=" flex justify-center items-start">
         {" "}
         {/* Use justify-center to center children */}
         {selectedSection === "RADIATOR" && (

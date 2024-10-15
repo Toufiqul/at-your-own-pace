@@ -114,32 +114,32 @@ const Section3 = () => {
         </div>
       </div>
       <div className="flex justify-between p-2">
-        <div className="flex flex-col p-2">
+        <div className="flex flex-col">
           <div>
-            <p className="mx-auto text-center bg-[#545DB9]">
+            <p className="mx-auto text-center bg-[#545DB9] w-2/4 p-2 text-xl">
               {keyPoints[0].title}
             </p>
-            <p>{keyPoints[0].content2}</p>
+            <p className="text-xl px-2">{keyPoints[0].content2}</p>
           </div>
           <div>
-            <p className="mx-auto text-center bg-[#545DB9]">
+            <p className="mx-auto text-center bg-[#545DB9] w-2/4 p-2 text-xl">
               {keyPoints[1].title}
             </p>
-            <p>{keyPoints[1].content2}</p>
+            <p className="text-xl px-2">{keyPoints[1].content2}</p>
           </div>
         </div>
         <div className="flex flex-col">
           <div>
-            <p className="mx-auto text-center bg-[#545DB9]">
+            <p className="mx-auto text-center bg-[#545DB9] w-2/4 p-2 text-xl">
               {keyPoints[3].title}
             </p>
-            <p>{keyPoints[3].content2}</p>
+            <p className="text-xl px-2">{keyPoints[3].content2}</p>
           </div>
           <div>
-            <p className="mx-auto text-center bg-[#545DB9]">
+            <p className="mx-auto text-center bg-[#545DB9] w-2/4 p-2 text-xl">
               {keyPoints[2].title}
             </p>
-            <p>{keyPoints[2].content2}</p>
+            <p className="text-xl px-2">{keyPoints[2].content2}</p>
           </div>
         </div>
       </div>
