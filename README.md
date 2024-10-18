@@ -37,7 +37,7 @@ We are actively collaborating with institutions like **Noazesh Knowledge Center*
 ## Tools and Technologies Used
 - **Frontend:** React.JS, TailwindCSS, HTML.
 - **Backend:** Python3 for data access, hosted on Vercel.
-- **Comics:** Dashtoon Studio, SNAP Toolbox.
+- **Comics:** Dashtoon Studio.
 - **Content designs, Videos and artworks:** Canva Pro.
 - **Data:** NASA Ocean Color, PACE data API.
 - **Data Processing and Visualisation:** ArcGIS Pro, SNAP Toolbox.
