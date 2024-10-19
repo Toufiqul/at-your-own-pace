@@ -11,26 +11,25 @@ const Section4 = () => {
     {
       id: 1,
       title: "Ocean Reflectance",
-      content:
-        "Ocean reflectance is the sunlight reflected off the ocean's surface, influenced by water composition and surface conditions, affecting satellite data and climate analysis.",
+      content: "The sunlight reflected off the ocean's surface",
     },
     {
       id: 2,
       title: "Whitecap Fraction",
       content:
-        "Whitecap fraction is the percentage of the ocean surface covered by white foam from breaking waves. It’s influenced by wind speed and helps indicate ocean turbulence and air-sea gas exchange",
+        "The percentage of the ocean surface covered by white foam from breaking waves",
     },
     {
       id: 3,
       title: "Angular Light Distributions",
       content:
-        "Angular light distribution refers to how light is scattered in different directions by particles in the atmosphere or ocean, influencing visibility and remote sensing measurements",
+        "How light is scattered in different directions by particles in the atmosphere or ocean",
     },
     {
       id: 4,
       title: "Oil slick detection",
       content:
-        "Oil slick detection involves identifying oil spills on water surfaces using methods like satellite imagery, radar, or aerial surveillance by analyzing differences in surface reflectance and texture",
+        "Identifying oil spills on water surfaces using methods like satellite imagery",
     },
     // {
     //   id: 5,
@@ -52,42 +51,42 @@ const Section4 = () => {
         marginTop: "-2px",
       }}
     >
-      <p className="mx-auto text-center text-white text-4xl mt-40">
+      <p className="mx-auto text-center font-bold text-white text-4xl mt-40 my-8">
         Surface Ocean Data by PACE
       </p>
       <div className="flex justify-between p-2">
-        <div className="flex flex-col p-2">
+        <div className="flex flex-col p-4">
           <div>
-            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 text-xl">
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 m-2 text-3xl">
               {keyPoints[0].title}
             </p>
-            <p className="text-xl px-2 w-3/4 mx-auto text-center">
+            <p className="text-3xl px-2 w-3/4 mx-auto text-center">
               {keyPoints[0].content}
             </p>
           </div>
           <div>
-            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 text-xl">
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 m-2 text-3xl">
               {keyPoints[1].title}
             </p>
-            <p className="text-xl px-2 w-3/4 mx-auto text-center">
+            <p className="text-3xl px-2 w-3/4 mx-auto text-center">
               {keyPoints[1].content}
             </p>
           </div>
         </div>
         <div className="flex flex-col">
           <div>
-            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 text-xl">
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 m-2 text-3xl">
               {keyPoints[3].title}
             </p>
-            <p className="text-xl px-2 w-3/4 mx-auto text-center">
+            <p className="text-3xl px-2 w-3/4 mx-auto text-center">
               {keyPoints[3].content}
             </p>
           </div>
           <div>
-            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 text-xl">
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 m-2 text-3xl">
               {keyPoints[2].title}
             </p>
-            <p className="text-xl px-2 w-3/4 mx-auto text-center">
+            <p className="text-3xl px-2 w-3/4 mx-auto text-center">
               {keyPoints[2].content}
             </p>
           </div>

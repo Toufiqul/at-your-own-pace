@@ -19,7 +19,7 @@ const Section5 = () => {
   return (
     <div
       ref={ref}
-      className="p-0 w-full min-h-screen flex flex-col justify-center items-center relative bg-no-repeat"
+      className="p-0 w-full min-h-screen flex flex-col items-center relative bg-no-repeat"
       style={{
         backgroundImage: `url(${backgroundImageUrl})`,
         backgroundSize: "100% 100%", // Change from cover to contain
@@ -28,7 +28,7 @@ const Section5 = () => {
         marginTop: "-2px",
       }}
     >
-      <p className="mx-auto text-center text-white text-4xl font-semi-bold">
+      <p className="mx-auto text-center text-white text-4xl font-bold">
         Submerged Data by PACE
       </p>
       <div className="flex flex-row">
@@ -66,21 +66,39 @@ const Section5 = () => {
           />
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-6 mx-auto content-center">
-        <div className="bg-opacity-40 bg-black bg-contain w-2/3">
+      <div className="absolute bottom-0 left-0 right-0 p-6 mx-auto content-center w-full flex justify-center">
+        <div className="bg-opacity-40 bg-black bg-contain w-2/3 p-4">
           <div className="w-full w-1/3"></div>
-          <p className="text-white">To learn more, check our Resource Page</p>
-          <p className="text-white">
-            By using our Portal, easily Access PACE Data
+          <p className="text-white flex items-center">
+            <span className="mr-2">✔️</span>
+            To learn more, check our{" "}
+            <a href="/learningResource" className="text-blue-500 underline">
+              Resource Page
+            </a>
           </p>
-          <p className="text-white">
-            Join our Global PACE Community dedicated to teachers, students and
-            PACE enthusiasts
+          <p className="text-white flex items-center">
+            <span className="mr-2">✔️</span>
+            By using our Portal, easily{" "}
+            <a href="/getData" className="text-blue-500 underline">
+              Access PACE Data
+            </a>
           </p>
-          <p className="text-white">
+          <p className="text-white flex items-center">
+            <span className="mr-2">✔️</span>
+            Join our{" "}
+            <a
+              href="https://discord.com/invite/cTcxpBJGsU"
+              className="text-blue-500 underline"
+            >
+              Global PACE Community
+            </a>{" "}
+            dedicated to teachers, students, and PACE enthusiasts
+          </p>
+          <p className="text-white flex items-center">
+            <span className="mr-2">✔️</span>
             For any help, get support from ORCA AI at bottom right section
           </p>
-          <p className="text-white">
+          <p className="text-white flex items-center underline underline-offset-2">
             Have fun exploring PACE and its awesome products at your own PACE!!!
           </p>
         </div>

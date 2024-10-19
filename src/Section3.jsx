@@ -74,6 +74,9 @@ const Section3 = () => {
         marginTop: "-2px",
       }}
     >
+      <h2 className="mx-auto text-center font-bold text-white text-4xl mt-40 inline">
+        Aerosols Data by PACE
+      </h2>
       <div className="flex justify-between space-x-4 p-4">
         {/* Left Column - One Row */}
         <div className="w-1/3 p-4">
@@ -83,14 +86,11 @@ const Section3 = () => {
             className=" flex justify-center items-center"
             style={{ width: "350px", height: "350px" }}
           />
-          <p>Middle Column - Second Row</p>
         </div>
 
         {/* Middle Column - Two Rows */}
         <div className="w-1/3 flex flex-col space-y-4 p-4">
-          <div className="p-4">
-            <p>Middle Column - First Row</p>
-          </div>
+          <div className="p-4"></div>
           <div className="p-4">
             <img
               src={imgMiddle}
@@ -98,7 +98,6 @@ const Section3 = () => {
               className=" flex justify-center items-center"
               style={{ width: "350px", height: "350px" }}
             />
-            <p>Middle Column - Second Row</p>
           </div>
         </div>
 
@@ -110,36 +109,43 @@ const Section3 = () => {
             className=" flex justify-center items-center"
             style={{ width: "350px", height: "350px" }}
           />
-          <p>Right Column - One Row</p>
         </div>
       </div>
       <div className="flex justify-between p-2">
-        <div className="flex flex-col">
+        <div className="flex flex-col w-1/2">
           <div>
-            <p className="mx-auto text-center bg-[#545DB9] w-2/4 p-2 text-xl">
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 m-2 text-3xl">
               {keyPoints[0].title}
             </p>
-            <p className="text-xl px-2">{keyPoints[0].content2}</p>
+            <p className="text-3xl px-2 mb-4 w-3/4 mx-auto text-center">
+              {keyPoints[0].content2}
+            </p>
           </div>
           <div>
-            <p className="mx-auto text-center bg-[#545DB9] w-2/4 p-2 text-xl">
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 m-2 text-3xl">
               {keyPoints[1].title}
             </p>
-            <p className="text-xl px-2">{keyPoints[1].content2}</p>
+            <p className="text-3xl px-2 mb-4 w-3/4 mx-auto text-center">
+              {keyPoints[1].content2}
+            </p>
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col w-1/2">
           <div>
-            <p className="mx-auto text-center bg-[#545DB9] w-2/4 p-2 text-xl">
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 m-2 text-3xl">
               {keyPoints[3].title}
             </p>
-            <p className="text-xl px-2">{keyPoints[3].content2}</p>
+            <p className="text-3xl px-2 mb-4 w-3/4 mx-auto text-center">
+              {keyPoints[3].content2}
+            </p>
           </div>
           <div>
-            <p className="mx-auto text-center bg-[#545DB9] w-2/4 p-2 text-xl">
+            <p className="mx-auto text-center bg-[#545DB9] w-1/2 p-2 m-2 text-3xl">
               {keyPoints[2].title}
             </p>
-            <p className="text-xl px-2">{keyPoints[2].content2}</p>
+            <p className="text-3xl px-2 mb-4 w-3/4 mx-auto text-center">
+              {keyPoints[2].content2}
+            </p>
           </div>
         </div>
       </div>

@@ -41,12 +41,19 @@ const Section1 = () => {
       }}
     >
       <div className="relative text-white bg-opacity-40 rounded-lg w-full max-w-screen-xl mx-auto">
-        <div className="flex flex-col items-center">
-          {" "}
-          <p className="text-l pt-2">Team ORCA presents</p>
-          <p className="text-4xl underline underline-offset-8">
-            At Your Own PACE!!
-          </p>
+        <div className="flex flex-col inline-flex items-center border-b-2 border-white">
+          {/* <div className="flex flex-col items-center border-b-2 border-white">{" "} */}
+          <p className="text-l pt-10">Team ORCA presents</p>
+          <div className="flex flex-row">
+            <p className="text-4xl pt-4">At Your Own</p>
+            <img
+              src="PACE_logo.png"
+              className=" mx-2"
+              style={{ width: "70px", height: "70px" }}
+              alt="page logo"
+            />
+            <p className="text-4xl pt-4"> !!</p>
+          </div>
         </div>
         {/* Top Row - Text on the Left and Satellite Image on the Right */}
         <div className="flex items-start justify-between w-full">
