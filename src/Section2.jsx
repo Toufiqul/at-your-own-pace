@@ -112,64 +112,6 @@ const Section2 = () => {
         )}
         <img src="cloud_small.png" alt="Cloud 2" className="w-full h-auto" />
       </motion.div>
-      {/* Buttons on the left side */}
-      <>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="absolute left-[30%] top-[15%] flex flex-col space-y-4"
-        >
-          <button
-            className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
-            onClick={() => {
-              handleButtonClick(clouds.cod);
-            }}
-          >
-            Cloud Optical Depth
-          </button>
-          {/* TODO make motion.button  */}
-          <button
-            className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
-            onClick={() => {
-              handleButtonClick(clouds.cloudHeight);
-            }}
-          >
-            Cloud Height
-          </button>
-          <button
-            className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
-            //   onClick={() => toggleLine("vertical")}
-            onClick={() => {
-              handleButtonClick(clouds.cloudThickness);
-            }}
-          >
-            Cloud Thickness
-          </button>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="absolute left-[70%] top-[15%] flex flex-col space-y-4"
-        >
-          <button
-            className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
-            onClick={() => {
-              handleButtonClick(clouds.dropletSize);
-            }}
-          >
-            Droplet size distribution
-          </button>
-          <button
-            className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
-            onClick={() => {
-              handleButtonClick(clouds.iceCrystal);
-            }}
-          >
-            Ice crystal shapes
-          </button>
-        </motion.div>
-      </>
       {selectedSection && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -202,6 +144,50 @@ const Section2 = () => {
         )}
         <img src="cloud_small.png" alt="Cloud 3" className="w-full h-auto" />
       </motion.div>
+      <div className="flex justify-between space-x-4 mt-4">
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
+          onClick={() => {
+            handleButtonClick(clouds.cod);
+          }}
+        >
+          Cloud Optical Depth
+        </button>
+        {/* TODO make motion.button  */}
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
+          onClick={() => {
+            handleButtonClick(clouds.cloudHeight);
+          }}
+        >
+          Cloud Height
+        </button>
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
+          //   onClick={() => toggleLine("vertical")}
+          onClick={() => {
+            handleButtonClick(clouds.cloudThickness);
+          }}
+        >
+          Cloud Thickness
+        </button>
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
+          onClick={() => {
+            handleButtonClick(clouds.dropletSize);
+          }}
+        >
+          Droplet size distribution
+        </button>
+        <button
+          className="bg-blue-500 text-white px-4 py-2 rounded bg-[#545DB9]"
+          onClick={() => {
+            handleButtonClick(clouds.iceCrystal);
+          }}
+        >
+          Ice crystal shapes
+        </button>
+      </div>
       {/* </div> */}
     </div>
   );

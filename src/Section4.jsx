@@ -51,7 +51,7 @@ const Section4 = () => {
         marginTop: "-2px",
       }}
     >
-      <p className="mx-auto text-center font-bold text-white text-4xl mt-40 my-8">
+      <p className="mx-auto text-center font-bold text-white text-4xl my-8">
         Surface Ocean Data by PACE
       </p>
       <div className="flex justify-between p-2">
