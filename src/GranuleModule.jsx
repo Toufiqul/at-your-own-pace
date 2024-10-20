@@ -1,9 +1,9 @@
-import React from 'react';
-import './Granule.css'
+import React from "react";
+import "./Granule.css";
 
 const GranuleModal = ({ showModal, granules, onClose }) => {
   if (!showModal) return null;
-
+  console.log(granules[0].umm.GranuleUR);
   return (
     <div className="modal-overlay">
       <div className="modal-content">
@@ -13,16 +13,26 @@ const GranuleModal = ({ showModal, granules, onClose }) => {
         <div className="granule-container">
           {granules.map((granule, index) => {
             // Get the image and nc file URLs
-            const imageUrl = granule.umm.RelatedUrls.find(url => url.Format === 'PNG')?.URL;
-            const ncFileUrl = granule.umm.RelatedUrls.find(url => url.Description?.includes('Download'))?.URL;
+            const imageUrl = granule.umm.RelatedUrls.find(
+              (url) => url.Format === "PNG"
+            )?.URL;
+            const ncFileUrl = granule.umm.RelatedUrls.find((url) =>
+              url.Description?.includes("Download")
+            )?.URL;
 
             return (
               <div key={index} className="granule-item">
-                {imageUrl && <img src={imageUrl} alt={`Granule ${index}`} style={{ width: '300px', height: 'auto' }} />}
+                {imageUrl && (
+                  <img
+                    src={imageUrl}
+                    alt={`Granule ${index}`}
+                    style={{ width: "300px", height: "auto" }}
+                  />
+                )}
                 {ncFileUrl && (
                   <div>
                     <a href={ncFileUrl} download>
-                      Download nc File
+                      {ncFileUrl.split("public/")[1]}
                     </a>
                   </div>
                 )}
