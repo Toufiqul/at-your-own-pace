@@ -3,6 +3,7 @@ import Home from "./Home";
 import GetData from "./GetData";
 import LearningRes from "./LearningRes";
 import VitrualTour from "./VitrualTour";
+import Community from "./Community";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Navbar() {
@@ -42,13 +43,19 @@ function Navbar() {
         {/* Center Links: Learning Resource */}
 
         {/* Right: Community */}
-        <a
+        <Link
+          to="/community"
+          className="text-lg font-semi-bold hover:text-blue-300"
+        >
+          Community{" "}
+        </Link>
+        {/* <a
           href="https://discord.gg/cTcxpBJGsU"
           className="text-lg font-semi-bold hover:text-blue-300"
           target="_blank"
         >
           Community
-        </a>
+        </a> */}
       </div>
     </nav>
   );
@@ -64,6 +71,7 @@ function App() {
           <Route path="/getData" element={<GetData />} />
           <Route path="/learningResource" element={<LearningRes />} />
           <Route path="/vitrualTour" element={<VitrualTour />} />
+          <Route path="/community" element={<Community />} />
         </Routes>
 
         {/* <Section backgroundImageUrl="./bg_1.gif">

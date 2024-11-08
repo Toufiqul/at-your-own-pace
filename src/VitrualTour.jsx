@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 function VitrualTour() {
-  const targetDate = new Date("October 25, 2024 23:59:59").getTime();
+  const targetDate = new Date("November 30, 2024 23:59:59").getTime();
 
   const [timeLeft, setTimeLeft] = useState(targetDate - new Date().getTime());
 
@@ -45,7 +45,7 @@ function VitrualTour() {
           Tour Starts In: {formatTimeLeft(timeLeft)}
         </h1>
       ) : (
-        <h1>Happy New Year!</h1>
+        <h1>Lift off !!</h1>
       )}
     </div>
   );
